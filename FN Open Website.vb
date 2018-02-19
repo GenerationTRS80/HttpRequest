@@ -3,7 +3,7 @@ Public Function FN_Open_Website(xlWrkSht_Button As Excel.Worksheet, sURL_website
 
  '--------------------------------------------------------------------------------------------
  '
- '  NOTE: This program
+ '  NOTE: This is the Main calling subroutine for HttpRequest
  '
  '
  
@@ -31,17 +31,17 @@ On Error GoTo ProcErr
  'Remove Protection
   FN_Public_UnProtect_Workbook
  
-'-----------------------------------------------------------------------------------------------
-' Open PreSale DB website
-'
-' NOTE: 1) need to check if busy or DAS ID Required
-'       2) Check if already open
-'
+ '-----------------------------------------------------------------------------------------------
+ ' Open PreSale DB website
+ '
+ ' NOTE: 1) need to check if busy or DAS ID Required
+ '       2) Check if already open
+ '
  
 
-'   Check to make sure that Forecast tool is already open
-'   NOTE: Need  to check if open in browser first because this subroutine is fast and CheckUrl_Exist is slow
-'         CheckUrl_Exist sub is slow if it is before CheckURL_OpenInBrowser
+ '   Check to make sure that Forecast tool is already open
+ '   NOTE: Need  to check if open in browser first because this subroutine is fast and CheckUrl_Exist is slow
+ '         CheckUrl_Exist sub is slow if it is before CheckURL_OpenInBrowser
  If CheckURL_OpenInBrowser(sURL_website) = False Then
  
     'NOTE: **** There is problem with "An error occurred in the secure channel support msxml3.dll" *****

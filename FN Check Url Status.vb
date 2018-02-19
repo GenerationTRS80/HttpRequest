@@ -1,39 +1,23 @@
 Public Function FN_CheckUrl_Status(sWebsite As String) As Boolean
 
- ' This function checks if a website is running by sending an HTTP request.
- ' If the website is up, the function returns True, otherwise it returns False.
- ' Argument: sWebsite [string] in "www.domain.tld" format, without the
- ' "http://" prefix.
- '
- ' Written by Rob van der Woude
- ' http://www.robvanderwoude.com
- '
- ' Script site found : http://www.robvanderwoude.com/vbstech_internet_website.php
- 
- ' XML DOM
- '
- ' Beginner guide: https://msdn.microsoft.com/en-us/library/aa468547.aspx
 
 'WinHTTP Objects
- 'Dim objHTTP As WinHttp.WinHttpRequest
- Dim objXMLHTTP As MSXML2.ServerXMLHTTP
+  Dim objXMLHTTP As MSXML2.ServerXMLHTTP
 
 
-'Local variable
+ 'Local variable
  Dim iHTTP_Status As Integer
  Dim sHTTP_TextStatus As String
  
-'Set default value
+ 'Set default value
  FN_CheckUrl_Status = False
     
 On Error GoTo ProcErr
 
-'Instantiate objects
-  'Set objHTTP = New WinHttp.WinHttpRequest
-  Set objXMLHTTP = New MSXML2.ServerXMLHTTP
+ 'Instantiate objects
+ Set objXMLHTTP = New MSXML2.ServerXMLHTTP
   
 
-' With objHTTP
  With objXMLHTTP
  
     .Open "GET", sWebsite, False
@@ -43,9 +27,7 @@ On Error GoTo ProcErr
  End With
 
 'Set *** PUBLIC VARIABELS *** Status value and Status text
- 'PUBLIC_WinHTTP_Status = objHTTP.Status
- 'PUBLIC_WinHTTP_StatusText = objHTTP.StatusText
- 
+
  PUBLIC_WinHTTP_Status = objXMLHTTP.Status
  PUBLIC_WinHTTP_StatusText = objXMLHTTP.StatusText
  
