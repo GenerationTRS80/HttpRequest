@@ -1,17 +1,11 @@
 Private Function Open_Browser(sWebsite As String, Optional bCloseBrowser As Boolean = False) As Boolean
 
- 'bCloseBrowser set to FALSE means to OPEN BROWSER. TRUE = Close Browser
+ 'Make sure Microsoft Internet Controls object library is referenced 
+  
+  
+ '1 Check to see if the website is already open
 
- 'Make sure you've set a reference to the
- 'Microsoft Internet Controls object library first
- '
- ' This code is from Wise Owl : http://www.wiseowl.co.uk/blog/s324/vba-ie.htm
- 
- 'create a variable to refer to an IE application, and
- 'start up a new copy of IE (you could use GetObject to access an existing copy of you already had one open)
-  
-  
- 'Check to see if the website is already open
+ 'Objects
   Dim ShellWins As SHDocVw.ShellWindows
   Dim ieApp As SHDocVw.InternetExplorer
   Dim WebBrowser As SHDocVw.WebBrowser
@@ -45,6 +39,7 @@ On Error GoTo ProcErr
      
  Else
  
+    ' ** Close PreSale website **
     'make sure you can see this new copy of IE!
     'loop through browser to check for PreSalesDB
      For Each WebBrowser In ShellWins

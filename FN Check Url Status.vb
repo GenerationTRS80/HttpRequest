@@ -1,8 +1,8 @@
 Public Function FN_CheckUrl_Status(sWebsite As String) As Boolean
 
 
-'WinHTTP Objects
-  Dim objXMLHTTP As MSXML2.ServerXMLHTTP
+ 'WinHTTP Objects
+ Dim objXMLHTTP As MSXML2.ServerXMLHTTP
 
 
  'Local variable

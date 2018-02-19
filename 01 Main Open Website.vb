@@ -34,12 +34,12 @@ On Error GoTo ProcErr
  '-----------------------------------------------------------------------------------------------
  ' Open PreSale DB website
  '
- ' NOTE: 1) need to check if busy or DAS ID Required
- '       2) Check if already open
+ ' NOTE: 1 need to check if busy or DAS ID Required
+ '       2 Check if PreSale website is already open
  '
  
 
- '   Check to make sure that Forecast tool is already open
+ '   ** Check to make sure that Forecast tool is already open **
  '   NOTE: Need  to check if open in browser first because this subroutine is fast and CheckUrl_Exist is slow
  '         CheckUrl_Exist sub is slow if it is before CheckURL_OpenInBrowser
  If CheckURL_OpenInBrowser(sURL_website) = False Then

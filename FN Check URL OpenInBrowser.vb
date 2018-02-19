@@ -1,5 +1,6 @@
 Private Function CheckURL_OpenInBrowser(sWebsite As String) As Boolean
 
+'  ** Make sure Microsoft Internet Controls object library is referenced **
 
 'Check to see if the website is already open
  Dim ShellWins As SHDocVw.ShellWindows
