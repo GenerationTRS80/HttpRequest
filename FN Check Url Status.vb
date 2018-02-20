@@ -1,5 +1,10 @@
 Public Function FN_CheckUrl_Status(sWebsite As String) As Boolean
 
+'-----------------------------------------------------------------------------------
+' This function checks if a website is running by sending an HTTP request.
+' It will return a message and status value for that website.
+
+'Note: The Microsoft library is referenced
 
  'WinHTTP Objects
  Dim objXMLHTTP As MSXML2.ServerXMLHTTP
