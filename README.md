@@ -1,8 +1,8 @@
 # HttpRequest
-Manipulate browser and check webpage status using VBA and VBScript within Excel
+This is an application module within the SharePoint-ReportingApp. The module will open an website in IE. If the website is already open it will then reload the website.
 
 VBScript using WinHttpRequest and XMLHttpRequest to accessing the website.
-Microsoft Internest Controls (VBA) to manipulate the browser and the web page
+Microsoft Internest Controls (VBA) to manipulate IE 
 
 
 The scripts will do the following:
@@ -13,7 +13,7 @@ The scripts will do the following:
 
 Note: Make sure in Excel you have these libraries set in references 
   tools -> references -> Microsoft WinHTTP Services, version 5.1,
-                         Microsoft Internest Controls,
+                         Microsoft Internet Controls,
                          Microsoft Scripting Runtime,
                          Microsoft XML v6.0
 
