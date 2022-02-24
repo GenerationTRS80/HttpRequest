@@ -2,7 +2,7 @@
 This is an application module within the SharePoint-ReportingApp. The module will open an website in IE. If the website is already open it will then reload the website.
 
 VBScript using WinHttpRequest and XMLHttpRequest to accessing the website.
-Microsoft Internest Controls (VBA) to manipulate IE 
+Microsoft Internet Controls (VBA) to manipulate IE 
 
 
 The scripts will do the following:
